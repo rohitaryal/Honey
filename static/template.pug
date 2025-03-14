@@ -1,0 +1,23 @@
+head
+  title= title
+  link(rel='icon' type='image/x-icon' href='https://www.google.com/s2/favicons?sz=64&domain_url=pugjs.org')
+  link(rel="stylesheet" href="https://egkoppel.github.io/product-sans/google-fonts.css")
+  style 
+    include ./style.css
+span.header(id="product-sans")
+  h1
+    | Welcome abroad, 
+    span.visitor v1s1t0r!
+  br
+  span.header-bottom
+    | Your remote ip is 
+    span.visitor= userIP
+    |  and remote port is 
+    span.visitor= userPort
+form.main-container(method='POST' action='/submit')
+  span.content
+    input#name(type='text' name='name' placeholder='Your pseudoname goes here' required='required')
+    br
+    input#secret(type='text' name='secret' placeholder='Your secrets go here' required='required')
+  span.banner Traffic goes over HTTP, so be careful what you send
+  button(type='submit') SEND
